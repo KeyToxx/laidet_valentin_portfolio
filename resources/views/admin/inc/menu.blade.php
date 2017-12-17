@@ -7,10 +7,9 @@
 	            <div class="collapse navbar-collapse" id="navbarSupportedContent-7" style="list-style: none;">
 	                <ul class="navbar-nav mr-auto">
 
+
+
 	                	<a class="navbar-brand" href="{{route('admin')}}"><i class="fa fa-home" aria-hidden="true"></i></a>
-<!-- 	                    <li class="nav-item active animated slideInUp">
-	                        <a class="nav-link" href="{{route('accueil')}}">Accueil <span class="sr-only">(current)</span></a>
-	                    </li> -->
 
 	                    <li class="nav-item animated fadeInDown">
 	                      <a class="nav-link" href="{{route('admin-about')}}">Gestion a propos</a>

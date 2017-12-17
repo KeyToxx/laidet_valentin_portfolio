@@ -23,7 +23,7 @@ body
 {
 	padding: 0;
 }
-
+ 
 header,.container-fluid
 {
 	z-index: 1;
@@ -508,6 +508,16 @@ h5 {
  -webkit-transform: translateX(-100%);
 
          transform: translateX(-100%);
+
+}
+
+@media screen and (max-width: 750px){
+
+	.skill-card
+	{
+		width: 80%;
+		margin: auto;
+	}
 
 }
 

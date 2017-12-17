@@ -16,3 +16,44 @@ body
   align-items: center;
   justify-content: center;
 }
+
+.admin-about
+{
+	width: 80%;
+	margin: auto;
+}
+
+.exitadmin
+{
+	position: fixed;
+	top: 9%;
+	left: 2%;
+}
+
+@media screen and (max-width: 720px){
+
+	.admin-about
+	{
+		width: 100%;
+	}
+
+	.panel-body
+	{
+		font-size: 0.7rem;
+	}
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 1024px){
+
+	.admin-about
+	{
+		width: 100%;
+	}
+
+	.panel-body
+	{
+		font-size: 0.9rem;
+	}
+
+}

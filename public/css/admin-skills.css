@@ -15,4 +15,11 @@ body
   display: flex;
   align-items: center;
   justify-content: center;
+} 
+
+.exitadmin
+{
+	position: fixed;
+	top: 9%;
+	left: 2%;
 }

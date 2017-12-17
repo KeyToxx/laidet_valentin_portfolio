@@ -12,15 +12,19 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/mdb.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin-projects.css')}}">
 </head>
-	<body>
+	<body class="animated fadeIn">
 		<!--Navbar-->
 		@auth
 		
 	    @include('admin.inc.menu')
 
-        <div class="container">
+        <div class="container-fluid">
+
+            <a class="exitadmin" href="{{route('accueil')}}"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+            Sortir de l'administration</a>
+
             <div class="row vertical-center text-center">
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-10">
 
                     @if(Session::has('message'))
                         <div class="alert alert-success">{{Session::get('message')}}</div>

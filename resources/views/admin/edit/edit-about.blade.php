@@ -12,7 +12,7 @@
 	    <link rel="stylesheet" type="text/css" href="{{asset('css/mdb.min.css')}}">
 	    <link rel="stylesheet" type="text/css" href="{{asset('css/edit-about.css')}}">
 	</head>
-	<body>
+	<body class="animated fadeIn">
 		@auth
 
 			@include('admin.inc.menu')
@@ -32,7 +32,7 @@
 							{!! Form::text('firstname',null,['id'=>'firstname']) !!}
 							{!! Form::text('lastname',null,['id'=>'lastname']) !!}
 							{!! Form::text('years',null,['id'=>'years']) !!}
-							{!! Form::submit('Envoyez !',['class'=>'btn btn-success']) !!}
+							{!! Form::submit('Editez',['class'=>'btn btn-primary']) !!}
 
 						{!! Form::close() !!}
 

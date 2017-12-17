@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/mdb.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin-choice-skills.css')}}">
   </head>
-  <body>
+  <body class="animated fadeIn">
 
           @include('admin.inc.menu')
     

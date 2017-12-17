@@ -12,39 +12,43 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/mdb.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin-about.css')}}">
 </head>
-	<body>
+	<body class="animated fadeIn">
 		<!--Navbar-->
 		@auth
 		
-		@include('admin.inc.menu')
+			@include('admin.inc.menu')
 
-	    <div class="container">
-	    	<div class="row vertical-center text-center">
-	    		<div class="col-md-10 offset-md-1">
-					
-					@if(Session::has('message'))
-						<div class="alert alert-success">{{Session::get('message')}}</div>
-					@endif
+		    <div class="container-fluid">
+		    	<div class="row vertical-center text-center admin-about">
 
-	    			<div class="panel panel-default"
-	    			>
-		    			<div class="panel-heading"></div>
+					<a class="exitadmin" href="{{route('accueil')}}"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+					Sortir de l'administration</a>
 
-		    			<div class="panel-body">
+		    		<div class="col-md-10">
+						
+						@if(Session::has('message'))
+							<div class="alert alert-success">{{Session::get('message')}}</div>
+						@endif
 
-							@foreach($adminabout as $adminabout)
-								<p>{{$adminabout->text}}</p>
-							@endforeach
+		    			<div class="panel panel-default">
 
-							{{link_to_route('admin-about.edit','Editez',[$adminabout->id],['class'=>'btn btn-primary'])}}
+			    			<div class="panel-heading"></div>
 
-		    			</div>
+			    			<div class="panel-body">
+
+								@foreach($adminabout as $adminabout)
+									<p>{{$adminabout->text}}</p>
+								@endforeach
+
+								{{link_to_route('admin-about.edit','Editez',[$adminabout->id],['class'=>'btn btn-primary mx-auto'])}}
+
+			    			</div>
+
+			    		</div>
 
 		    		</div>
-
-	    		</div>
-	    	</div>
-	    </div>
+		    	</div>
+		    </div>
 
 	    @endauth
 		<script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
