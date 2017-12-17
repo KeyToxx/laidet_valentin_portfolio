@@ -1,0 +1,53 @@
+/****NAVBAR****/
+
+.navbar-brand
+{
+    font-size: 1.2rem;
+}
+
+.form-inline a
+{
+  color: #fff;
+}
+
+.form-inline i
+{
+  margin-right: 5px;
+}
+
+nav.navbar .dropdown-menu a:hover
+{
+  color: #000!important;
+}
+
+.top-nav-collapse {
+    background-color: #21282E !important; 
+}
+.navbar:not(.top-nav-collapse) {
+    background: #21282E !important;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #21282E !important;
+    } 
+}
+h1 {
+    letter-spacing: 8px;
+}
+h5 {
+    letter-spacing: 3px;
+}
+.hr-light {
+    border-top: 3px solid #fff;
+    width: 80px;
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 700px; 
+    } 
+}
+
+/**********************************/

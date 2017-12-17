@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body
+{ 
+    margin: 0;
+    background: #333;
+    color: #fff;
+    font-family: 'Raleway';
+    box-sizing: border-box;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ligne
+{
+    position: relative;
+    top: 100px;
+}
+
+.nom,.mail,.sujet,.message
+{
+    border: 1px solid orange;
+}
+
+@media screen and (max-width: 767px){
+
+    .ligne
+    {
+        margin-bottom: 5%;
+    }
+
+    .nom,.mail,.sujet,.message
+    {
+        border: none;
+    }
+
+}

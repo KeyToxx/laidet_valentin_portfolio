@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body
+{
+    margin: 0;
+    background: url(../img/space.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Raleway';
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Responsive Design*/
+
+@media screen and (max-width: 1024px){
+
+    body
+    {
+        background-size: 200% 100%;
+        background-attachment: initial;
+    }
+
+    main
+    {
+        padding: 0 5%;
+    }
+
+    main h1
+    {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+}
