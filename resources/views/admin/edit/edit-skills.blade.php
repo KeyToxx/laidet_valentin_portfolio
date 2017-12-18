@@ -21,7 +21,7 @@
 
 				<div class="row vertical-center text-center">
 
-					<div class="col-md-10 offset-md-1">
+					<div class="col-md-10">
 
 						<h1>Editez la compétence</h1>
 						
@@ -31,7 +31,7 @@
 							{!! Form::text('name',null,['id'=>'name']) !!}
 							{!! Form::text('level',null,['id'=>'level']) !!}
 							{!! Form::text('image',null,['id'=>'image']) !!}
-							{!! Form::submit('Envoyez !',['class'=>'btn btn-success']) !!}
+							{!! Form::submit('Editez',['class'=>'btn btn-primary']) !!}
 
 						{!! Form::close() !!}
 
@@ -47,6 +47,5 @@
 
 			</div>
 		@endauth
-
 	</body>
 </html>

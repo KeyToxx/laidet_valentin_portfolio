@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Choisissez votre compétences</title>
+    <title>Choisissez votre compétence</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
@@ -57,6 +57,6 @@
               @endforeach
 
           </div>
-
+    <script type="text/javascript" src="{{asset('js/admin-choice-detroy-skills.js')}}"></script>
   </body>
 </html>
