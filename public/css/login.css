@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+#app
+{
+    background: #333; /**#1C1C1E**/
+/*    background: -webkit-linear-gradient(to right, #434343, #000000);
+    background: linear-gradient(to right, #434343, #000000);*/
+	 font-family: 'Raleway';
+	 max-width: 100%;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.panel
+{
+  transition: box-shadow ease-in-out .3s;
+}
+
+div.panel:hover
+{
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
+}
+
+button,a
+{
+    transition: all ease-in-out .3s;
+}
+
+input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search-md"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea.md-textarea,.form-control
+{
+  font-size: 1.5rem;
+  width: 70%;
+}
+
+
+@media screen and (max-width: 720px){
+
+  #forgotpsswd
+  {
+    font-size: 1rem;
+  }
+
+}
