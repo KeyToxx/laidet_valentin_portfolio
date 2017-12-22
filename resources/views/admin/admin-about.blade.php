@@ -15,7 +15,6 @@
 	<body class="animated fadeIn">
 		<!--Navbar-->
 		@auth
-		
 			@include('admin.inc.menu')
 
 		    <div class="container-fluid">

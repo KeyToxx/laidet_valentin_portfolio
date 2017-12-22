@@ -15,6 +15,9 @@
 
 Route::get('/', 'HomeController@index')->name('accueil');
 
+// CV
+Route::get('/cv', 'HomeController@cv')->name('cv_download');
+
 //PROJETS
 
 Route::get('/projet', 'GaleriesController@index')->name('projet');
@@ -48,6 +51,9 @@ Route::name('admin-choice-destroy-projects')->get('admin-choice-destroy-projects
 Route::resource('admin-mails','AdminMailsController');
 Route::name('admin-mails')->get('admin-mails','AdminMailsController@index');
 Route::name('show-mails')->get('show-mails','AdminMailsController@showmails');
+
+Route::resource('admin-cv','AdminCvController');
+Route::name('admin-cv')->get('admin-cv','AdminCvController@index');
 
 //AUTH
 

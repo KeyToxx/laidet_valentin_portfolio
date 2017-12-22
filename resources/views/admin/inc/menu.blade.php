@@ -27,6 +27,10 @@
 	                      <a class="nav-link" href="{{route('admin-mails')}}">Gestion des E-mails</a>
 	                    </li>
 
+	                    <li class="nav-item animated slideInUp">
+	                      <a class="nav-link" href="{{route('admin-cv')}}">Gestion du CV</a>
+	                    </li>
+
 	                </ul>
 	                <div class="form-inline">
 	                    <!-- <a href="{{route('login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i>CONNEXION</a> -->
