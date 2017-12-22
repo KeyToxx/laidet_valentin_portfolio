@@ -27,3 +27,15 @@ body
   align-items: center;
   justify-content: center;
 }
+
+img
+{
+  max-width: 100%;
+}
+
+a
+{
+  position: fixed;
+  top: 2%;
+  left: 2%;
+}

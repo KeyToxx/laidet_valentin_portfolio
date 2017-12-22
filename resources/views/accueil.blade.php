@@ -56,7 +56,7 @@
 
           <div class="row about">
 
-              <div class="offset-md-3 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="offset-md-3 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 about-content animated">
                 @foreach ($about as $text)
 
                   <?php
