@@ -36,6 +36,11 @@
             </div>
         </div>
 
+{{--                 <video width="100%">
+          <source src="videos/bg.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video> --}}
+
     </header>
     <!--Main Navigation-->
 
@@ -71,7 +76,7 @@
                 {!! Form::open(['route'=>'cv_download','method'=>'GET','class'=>'text-center']) !!}
                   
                   {!! Form::token() !!}
-                  {!! Form::button('Télécharger mon CV',['class'=>"btn btn-outline-primary rounded waves-effect",'type'=>'submit']) !!}
+                  {!! Form::button('Télécharger mon CV',['class'=>"btn btn-outline-primary rounded waves-effect z-depth-5",'type'=>'submit']) !!}
 
                 {!! Form::close() !!}
 
@@ -90,7 +95,7 @@
               @foreach ($skills as $skill)
 
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 justify-content-center text-center  mt-1 mb-5">
-
+                    
                     <div class="skill-card">
 
                         <header class="skill-card__header skill-card__{{$skill->name}}"><img class="skill-card__icon" src="{{$skill->image}}" alt="Logo {{$skill->name}}"/></header>

@@ -17,6 +17,10 @@
 	@include('admin.inc.menu')
 
 	<div class="container-fluid">
+
+		<a class="exitadmin" href="{{route('accueil')}}"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+					Sortir de l'administration</a>
+
 		<div class="row vertical-center text-center">
 			<div class="col-md-10">
 	

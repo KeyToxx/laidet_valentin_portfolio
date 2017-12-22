@@ -84,7 +84,7 @@ class AdminCvController extends Controller
             $admincv = Cv::find($id);
             $admincv->update($request->all());
             $admincv->link_files = $request->link_files;
-            $admincv->link_files->store(config('images.path'), 'public');
+            // $admincv->link_files->store(config('images.path'), 'public');
             // return Storage::disk('public')->download($ligne->link_files);
             return redirect()->route('admin-cv')->with('message','Le CV à été editez avec succès !');
     }
