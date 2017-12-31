@@ -31,11 +31,28 @@ body
 {
     position: relative;
     top: 100px;
+    margin-bottom: 1%;
 }
 
-.nom,.mail,.sujet,.message
+.ligne span
 {
-    border: 1px solid orange;
+  padding: 3% 0 0 0;
+}
+
+span,button
+{
+  vertical-align: middle;
+}
+
+button.btn
+{
+  margin: 0;
+  font-size: 0.5rem;
+}
+
+.delete-mails i
+{
+  padding-right: 5px;
 }
 
 @media screen and (max-width: 767px){
@@ -43,11 +60,6 @@ body
     .ligne
     {
         margin-bottom: 5%;
-    }
-
-    .nom,.mail,.sujet,.message
-    {
-        border: none;
     }
 
 }

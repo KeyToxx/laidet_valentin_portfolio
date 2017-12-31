@@ -34,7 +34,7 @@
 
                     {!! Form::open(array('route'=>['admin-projects.destroy',$image->id],'method'=>'DELETE')) !!}
                         
-                        {!! Form::button('Supprimez',['class'=>'btn btn-danger','type'=>'submit']) !!}
+                        {!! Form::button('<i class="fa fa-trash"></i>Supprimez',['class'=>'btn btn-danger delete-projects','type'=>'submit']) !!}
 
                     {!! Form::close() !!}
 
@@ -45,6 +45,6 @@
             
           </div>
           
-
+    <script type="text/javascript" src="{{asset('js/admin.js')}}"></script>
   </body>
 </html>

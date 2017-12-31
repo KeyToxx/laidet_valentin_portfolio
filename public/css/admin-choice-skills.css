@@ -15,6 +15,7 @@ body
     background: #333;
     color: #fff;
     font-family: 'Raleway';
+    overflow-x: hidden;
 }
 
 .vertical-center {
@@ -28,16 +29,6 @@ body
 
 /**SKILLS**/
 
-.titre-skills
-{
-	padding: 3% 0 1.5% 0;
-	background: #333;
-	background-attachment: fixed;
-	color: #fff;
-	font-size: 1.5rem;
-	z-index: 1;
-}
-
 .titre-skills h1
 {
 	font-weight: bold;
@@ -47,11 +38,12 @@ body
 {
 	background: #333;
 	z-index: 10;
+  position: relative;
+  top: 101px;
 }
 
 .skills
 {
-	padding: 0 0 3% 0;
 	background: #333;
 	background-attachment: fixed;
 	color: #fff;
@@ -61,6 +53,11 @@ body
 .skills p
 {
 	line-height: 2;
+}
+
+.delete-skills i
+{
+  padding-right: 5px;
 }
 
 /***************/
@@ -78,7 +75,9 @@ body
 
  padding: 20px;
 
- width: 100%;
+ width: 90%;
+
+ margin: auto;
 
  background-color: #FFF;
 
@@ -409,3 +408,12 @@ body
 
 
 /****************************/
+
+@media screen and (min-width: 992px) and (max-width: 1225px){
+
+  .navbar .nav-item a.nav-link
+  {
+    font-size: 0.9rem;
+  }
+
+}

@@ -63,3 +63,8 @@ img
 	-moz-filter: grayscale(0%);
 	-webkit-filter: saturate(200%);
 }
+
+.delete-projects i
+{
+  padding-right: 5px;
+}

@@ -15,18 +15,12 @@
   <body class="animated fadeIn">
 
           @include('admin.inc.menu')
-    
-          <div class="row titre-skills">
-            <div class="col-md-12 col-lg-12 col-xl-12">
-              <h1 class="text-center">Choisissez la compétence à supprimer</h1>
-            </div>
-          </div>
 
           <div class="row skills">
             
               @foreach ($adminskills as $skill)
 
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 justify-content-center text-center  mt-1 mb-5">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 text-center mt-1 mb-5">
 
                     <div class="skill-card">
 
@@ -48,7 +42,7 @@
 
                     {!! Form::open(array('route'=>['admin-skills.destroy',$skill->id],'method'=>'DELETE')) !!}
                         
-                        {!! Form::button('Supprimez',['class'=>'btn btn-danger','type'=>'submit']) !!}
+                        {!! Form::button('<i class="fa fa-trash"></i>Supprimez',['class'=>'btn btn-danger delete-skills','type'=>'submit']) !!}
 
                     {!! Form::close() !!}
 
@@ -57,6 +51,6 @@
               @endforeach
 
           </div>
-    <script type="text/javascript" src="{{asset('js/admin-choice-detroy-skills.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/admin.js')}}"></script>
   </body>
 </html>
