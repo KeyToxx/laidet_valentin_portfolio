@@ -490,23 +490,9 @@ img
 
 /****************************/
 
-
-
-/**FOOTER**/
-
 .container-fluid
 {
 	margin-bottom: 60px;
-}
-
-footer
-{
-	z-index: -1;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	padding: 1% 0;
-	background: #21282E;
 }
 
 

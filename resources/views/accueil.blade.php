@@ -122,19 +122,7 @@
 
       </div><!--Container-fluid-->
 
-
-      <footer>
-
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <span>Contact : <a href="mailto:valentinlaidet1@gmail.com">valentinlaidet1@gmail.com</a></span>
-          </div>
-          <div class="offset-md-6 col-md-3 text-center">
-            Partage du site via les réseaux sociaux
-          </div>
-        </div>
-        
-      </footer>
+      @include('inc.footer')
                 
   
   <script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>

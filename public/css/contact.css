@@ -38,6 +38,11 @@ img
 	font-size: 1rem;
 }*/
 
+.container-fluid
+{
+	margin-bottom: 61px;
+}
+
 #titre
 {
 	/*background: #21282E;*/

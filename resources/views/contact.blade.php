@@ -61,7 +61,10 @@
 
             </div>
       </div>
-    </div>
+    </div><!--container-fluid-->
+
+    @include('inc.footer')
+
   <script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
   </body>
 </html>
