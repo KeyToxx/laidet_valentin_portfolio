@@ -20,40 +20,26 @@
 
 		<div class="container-fluid">
 			
-				@foreach($mails as $ligne)
+			<div class="row content">
+				
+				<div class="col-md-12 heading">
+					
+					<span id="sujet">{{$mails->sujet}}</span>
+					<hr>
+					<span id="name"><i class="fa fa-user"></i>{{$mails->name}}</span>
+					<span id="mail">{{$mails->mail}}</span>	
 
-					<div class="text-center row ligne">
+				</div>
 
-							<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 nom">
-								<span>{{$ligne->name}}</span>
-							</div>
+				<div class="col-md-12 body">
+					
+					<span id="message">{{$mails->message}}</span>
 
-							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 mail">
-								<span>{{$ligne->mail}}</span>
-							</div>
+				</div>
 
-							<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 sujet">
-								<span>{{$ligne->sujet}}</span>
-							</div>
+			</div>
 
-							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 message">
-								<span>{{$ligne->message}}</span>
-							</div>
-
-							<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-								
-								{!! Form::open(array('route'=>['admin-mails.destroy',$ligne->id],'method'=>'DELETE')) !!}
-			                        
-			                        {!! Form::button('<i class="fa fa-trash"></i>Supprimez',['class'=>'btn btn-danger delete','type'=>'submit']) !!}
-
-			                    {!! Form::close() !!}
-
-							</div>
-
-					</div><!--row-->
-
-				@endforeach
-
+				
 		</div>
 
 	    @endauth

@@ -31,11 +31,6 @@ class AdminMailsController extends Controller
         return view('admin.admin-mails', compact('mails'));
     }
 
-    public function showmails(){
-        $mails = Contacts::all();
-        return view('admin.show-mails',compact('mails'));
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -65,7 +60,9 @@ class AdminMailsController extends Controller
      */
     public function show($id)
     {
-        //
+        $mails = Contacts::findOrFail($id);
+        //dd($mails);
+        return view('admin.show-mails',compact('mails'));
     }
 
     /**

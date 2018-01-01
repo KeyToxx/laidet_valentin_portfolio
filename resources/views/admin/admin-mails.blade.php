@@ -12,33 +12,56 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/mdb.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin-mails.css')}}">
 </head>
-	<body class="animated fadeIn">
-		<!--Navbar-->
-		@auth
-		
-    	    @include('admin.inc.menu')
+    <body class="animated fadeIn">
+        <!--Navbar-->
+        @auth
+        
+        @include('admin.inc.menu')
 
-    		<div class="container-fluid">
+        <div class="container-fluid">
+            
+                @foreach($mails as $ligne)
 
-                <a class="exitadmin" href="{{route('accueil')}}"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
-                Sortir de l'administration</a>
+                    <a href="{{url('show-mails/'.$ligne->id)}}">
 
-                <div class="row vertical-center text-center">
-                    <div class="col-md-10">
+                        <div class="text-center row ligne">
 
-                        @if(Session::has('message'))
-                            <div class="alert alert-success">{{Session::get('message')}}</div>
-                        @endif
-                        
-                        {{link_to_route('show-mails','Supprimez un mail',null,['class'=>'btn btn-danger'])}}
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 nom">
+                                    <span>{{$ligne->name}}</span>
+                                </div>
 
-                    </div>
-                </div>
-            </div>
+                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 mail">
+                                    <span>{{$ligne->mail}}</span>
+                                </div>
 
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 sujet">
+                                    <span>{{$ligne->sujet}}</span>
+                                </div>
 
-	    @endauth
-		<script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
-  		<script type="text/javascript" src="{{asset('js/admin.js')}}"></script>
-	</body>
+                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 message">
+                                    <span>{{$ligne->message}}</span>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                                    
+                                    {!! Form::open(array('route'=>['admin-mails.destroy',$ligne->id],'method'=>'DELETE')) !!}
+                                        
+                                        {!! Form::button('<i class="fa fa-trash"></i>Supprimez',['class'=>'btn btn-danger delete','type'=>'submit']) !!}
+
+                                    {!! Form::close() !!}
+
+                                </div>
+
+                        </div><!--row-->
+
+                    </a>
+
+                @endforeach
+
+        </div>
+
+        @endauth
+        <script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/admin.js')}}"></script>
+    </body>
 </html>

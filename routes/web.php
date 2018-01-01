@@ -67,7 +67,7 @@ Route::name('admin-choice-destroy-projects')->get('admin-choice-destroy-projects
 //Route::get('/admin-mails','AdminMailsController@index')->name('admin-mails');
 Route::resource('admin-mails','AdminMailsController');
 Route::name('admin-mails')->get('admin-mails','AdminMailsController@index');
-Route::name('show-mails')->get('show-mails','AdminMailsController@showmails');
+Route::get('show-mails/{id}','AdminMailsController@show')->name('show-mails');
 
 Route::resource('admin-cv','AdminCvController');
 Route::name('admin-cv')->get('admin-cv','AdminCvController@index');

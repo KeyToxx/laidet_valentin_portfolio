@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-html
+body
 {
-  -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+	margin: 0;
+	padding: 0;
+	font-family: Ubuntu, sans-serif;
+	background: #fff !important;
 }
 
-body
-{ 
-    margin: 0;
-    background: #333;
-    color: #fff;
-    font-family: 'Raleway';
-    box-sizing: border-box;
+img
+{
+	max-width: 100%;
+}
+
+i
+{
+	padding-right: 5px;
 }
 
 .vertical-center {
@@ -27,39 +27,54 @@ body
   justify-content: center;
 }
 
-.ligne
+.content
 {
-    position: relative;
-    top: 100px;
-    margin-bottom: 1%;
+	position: relative;
+	top: 71px;
+	color: #000;
 }
 
-.ligne span
+.heading::first-letter
 {
-  padding: 3% 0 0 0;
+	text-transform: uppercase;
 }
 
-span,button
+.heading hr
 {
-  vertical-align: middle;
+	border-top: 1px solid black;
 }
 
-button.btn
+.heading #sujet
 {
-  margin: 0;
-  font-size: 0.5rem;
+	font-size: 1.5rem;
 }
 
-.delete-mails i
+.heading #mail::before
 {
-  padding-right: 5px;
+	content: "<";
 }
 
-@media screen and (max-width: 767px){
+.heading #mail::after
+{
+	content: ">";
+}
 
-    .ligne
-    {
-        margin-bottom: 5%;
-    }
+.heading #name,.heading #mail
+{
+	font-size: 1.3rem;
+}
 
+.body::first-letter
+{
+	text-transform: uppercase;
+}
+
+.body
+{
+	margin-top: 1%;
+}
+
+.body #message
+{
+	font-size: 1.2rem;
 }

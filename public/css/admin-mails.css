@@ -10,11 +10,12 @@ html
 }
 
 body
-{
+{ 
     margin: 0;
     background: #333;
     color: #fff;
     font-family: 'Raleway';
+    box-sizing: border-box;
 }
 
 .vertical-center {
@@ -26,9 +27,46 @@ body
   justify-content: center;
 }
 
-.exitadmin
+.ligne
 {
-	position: fixed;
-	top: 9%;
-	left: 2%;
+    position: relative;
+    top: 100px;
+    margin-bottom: 1%;
+    outline: none;
+}
+
+.ligne span
+{
+  padding: 3% 0 0 0;
+}
+
+span,button
+{
+  vertical-align: middle;
+}
+
+button.btn
+{
+  margin: 0;
+  font-size: 0.5rem;
+}
+
+.delete i
+{
+  padding-right: 5px;
+}
+
+a,a:hover
+{
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px){
+
+    .ligne
+    {
+        margin-bottom: 5%;
+    }
+
 }
