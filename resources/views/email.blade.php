@@ -16,7 +16,7 @@
 
 		</ul>
 		<div style="width: 50%;margin: auto;">
-			<a target="_blank" href="http://127.0.0.1:8000/show-mails" style="display: block;text-align: center;"><button style="background-color: transparent;border: 1px solid lightblue;border-radius: 20px;color: lightblue;font-size: 1rem;padding: 10px;width: 20%;margin: 0 auto 20px auto;">Voir plus</button></a>
+			<a target="_blank" href="http://aformac-vichy-app7.ovh/admin-mails" style="display: block;text-align: center;"><button style="background-color: transparent;border: 1px solid lightblue;border-radius: 20px;color: lightblue;font-size: 1rem;padding: 10px;width: 20%;margin: 0 auto 20px auto;">Voir plus</button></a>
 		</div>
 	</body>
 </html>

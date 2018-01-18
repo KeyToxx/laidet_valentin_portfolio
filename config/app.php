@@ -164,7 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Chencha\Share\ShareServiceProvider::class,
+        // Chencha\Share\ShareServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -229,7 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Share' => Chencha\Share\ShareFacade::class,
+        // 'Share' => Chencha\Share\ShareFacade::class,
 
     ],
 

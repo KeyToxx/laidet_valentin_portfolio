@@ -17,20 +17,20 @@ Route::get('/', 'HomeController@index')->name('accueil');
 
 //Social Media
 
-Route::get('/twitter', function()
-{
-	return Share::load('http://127.0.0.1', 'Partage de mon site')->twitter();
-});
+// Route::get('/twitter', function()
+// {
+// 	return Share::load('http://127.0.0.1', 'Partage de mon site')->twitter();
+// });
 
-Route::get('/facebook', function()
-{
-	return Share::load('http://127.0.0.1', 'Partage de mon site')->facebook();
-});
+// Route::get('/facebook', function()
+// {
+// 	return Share::load('http://127.0.0.1', 'Partage de mon site')->facebook();
+// });
 
-Route::get('/linkedin', function()
-{
-	return Share::load('http://127.0.0.1', 'Partage de mon site')->linkedin();
-});
+// Route::get('/linkedin', function()
+// {
+// 	return Share::load('http://127.0.0.1', 'Partage de mon site')->linkedin();
+// });
 
 // CV
 Route::get('/cv', 'HomeController@cv')->name('cv_download');

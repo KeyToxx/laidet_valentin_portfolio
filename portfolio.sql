@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 17 déc. 2017 à 18:00
+-- Généré le :  lun. 08 jan. 2018 à 10:13
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `abouts` (
 --
 
 INSERT INTO `abouts` (`id`, `text`, `firstname`, `lastname`, `years`, `created_at`, `updated_at`) VALUES
-(1, 'Bonjour, je m\'appelle prénom nom et je suis actuellement étudiant en développement Web à Vichy. J\'ai débuté dans le développement Web en 2015 par curiosité et depuis ce jour je suis passionné par les technologies du web. J\'adore créer de belles pages Web en HTML5, CSS3 et JavaScript ainsi que de belles animations en jQuery. Mes autres compétences comprennent des CMS comme WordPress, Prestashop. Je débute également dans le graphisme sous le logiciel Photoshop.', 'Valentin', 'Laidet', 19, '2017-12-15 23:00:00', '2017-12-17 16:55:42');
+(1, 'Bonjour, je m\'appelle prénom nom et je suis actuellement étudiant en développement Web à Vichy. J\'ai débuté dans le développement Web en 2015 par curiosité et depuis ce jour je suis passionné par les technologies du web. J\'adore créer de belles pages Web en HTML5, CSS3 et JavaScript ainsi que de belles animations en jQuery. Mes autres compétences comprennent des CMS comme WordPress, Prestashop. Je débute également dans le graphisme sous le logiciel Photoshop.', 'Valentin', 'Laidet', 19, '2017-12-15 23:00:00', '2018-01-08 07:26:50');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,38 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `mail`, `sujet`, `message`, `created_at`, `updated_at`) VALUES
+(7, 'laidet', 'valentinalaidet1@gmail.com', 'sujet', 'message', '2018-01-08 07:10:20', '2018-01-08 07:10:20'),
+(8, 'laidet', 'valentinalaidet1@gmail.com', 'sujet', 'message', '2018-01-08 07:12:00', '2018-01-08 07:12:00'),
+(10, 'toto', 'v.laidet@aformac-vichy.fr', 'sujet', 'message', '2018-01-08 07:25:34', '2018-01-08 07:25:34');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cv`
+--
+
+DROP TABLE IF EXISTS `cv`;
+CREATE TABLE IF NOT EXISTS `cv` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `link_files` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `cv`
+--
+
+INSERT INTO `cv` (`id`, `link_files`, `created_at`, `updated_at`) VALUES
+(1, 'CDC transfire.pdf', NULL, '2017-12-22 11:59:40');
 
 -- --------------------------------------------------------
 
@@ -102,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `migrations`
@@ -116,27 +147,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2017_12_14_090035_create_gallery_table', 4),
 (6, '2017_12_14_091322_create_galerie_table', 5),
 (7, '2017_12_14_112339_create_contact_table', 6),
-(8, '2017_12_15_181244_create_adminskills_table', 7);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `old_users`
---
-
-DROP TABLE IF EXISTS `old_users`;
-CREATE TABLE IF NOT EXISTS `old_users` (
-  `id_users` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user` varchar(30) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `firstname` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL,
-  `years` varchar(3) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_users`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+(8, '2017_12_15_181244_create_adminskills_table', 7),
+(9, '2017_12_22_091521_create_cv_table', 8);
 
 -- --------------------------------------------------------
 
@@ -151,6 +163,13 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   `created_at` timestamp NULL DEFAULT NULL,
   KEY `password_resets_email_index` (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('v.laidet@aformac-vichy.fr', '$2y$10$tOzyBxp/xe3hIaNcmj0tvuN4aveip8E3pP259.iniKYlYOwNWJ48W', '2017-12-19 11:33:46');
 
 -- --------------------------------------------------------
 
@@ -169,21 +188,21 @@ CREATE TABLE IF NOT EXISTS `skills` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `skills_user_id_foreign` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `skills`
 --
 
 INSERT INTO `skills` (`id`, `name`, `level`, `image`, `user_id`, `created_at`, `updated_at`) VALUES
-(2, 'HTML5', 9, 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg', 1, '2017-12-13 14:00:00', '2017-12-13 14:00:00'),
+(2, 'HTML5', 9, 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg', 1, '2017-12-13 14:00:00', '2018-01-08 07:27:22'),
 (3, 'Css3', 9, 'img/css3.png', 1, '2017-12-13 14:00:00', '2017-12-13 14:00:00'),
 (4, 'Bootstrap', 7, 'img/bs.png', 1, '2017-12-13 14:00:00', '2017-12-13 14:00:00'),
 (5, 'Javascript', 5, 'img/js.png', 1, '2017-12-13 14:00:00', '2017-12-13 14:00:00'),
 (6, 'jQuery', 5, 'img/jy.png', 1, '2017-12-13 14:00:00', '2017-12-13 14:00:00'),
 (7, 'Wordpress', 5, 'img/wp.png', 1, '2017-12-13 14:00:00', '2017-12-13 14:00:00'),
 (8, 'PHPmySQL', 5, 'img/phpmysql.png', 1, '2017-12-13 14:00:00', '2017-12-17 14:39:23'),
-(9, 'Laravel', 4, 'img/laravel.png', 1, '2017-12-16 23:00:00', '2017-12-16 23:00:00');
+(9, 'Laravel', 4, 'img/laravel.png', 1, '2017-12-16 23:00:00', '2017-12-18 10:43:13');
 
 -- --------------------------------------------------------
 
@@ -210,8 +229,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'Valentin', 'Laidet', 'v.laidet@aformac-vichy.fr', '$2y$10$OaJO4bN6KVjaeY.eHQH.NORO98YsqeqeTYQptLbk53Epc3TFc0nde', 'CLM3ATXcunuzPmnRDxKxzm66LlLxHnepVEQBNilxVGJCW7KktbNLbvzCDYjM', '2017-12-14 14:07:34', '2017-12-14 14:07:34'),
-(3, 'Valentin', 'Laidet', 'valentinlaidet1@gmail.com', '$2y$10$J6MhB75V1tf/YCX4mRlN5.CQhq5bwNpRoSKbqWVM/UjKU3GKF/lU6', 'teoPr4Q3lqfwqEDuvapQIwth7T6zDsYDgbsULCgKuOtxLt1sqkE6IKieLXQr', '2017-12-14 21:16:29', '2017-12-14 21:16:29');
+(2, 'Valentin', 'Laidet', 'v.laidet@aformac-vichy.fr', '$2y$10$OaJO4bN6KVjaeY.eHQH.NORO98YsqeqeTYQptLbk53Epc3TFc0nde', 'FgwtNDzhbI694sn2yBadbwDiwc36vvFHT6TnDVA7H6vZYW2lLhsdm2pRlSUo', '2017-12-14 14:07:34', '2017-12-14 14:07:34'),
+(3, 'Valentin', 'Laidet', 'valentinlaidet1@gmail.com', '$2y$10$J6MhB75V1tf/YCX4mRlN5.CQhq5bwNpRoSKbqWVM/UjKU3GKF/lU6', 'qqakuPC52ti4Viw54sW0c1fd8uAxBUZI7JIdGDgJMzubBca7TJByEm0WImcM', '2017-12-14 21:16:29', '2017-12-14 21:16:29');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

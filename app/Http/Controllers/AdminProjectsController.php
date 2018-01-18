@@ -93,7 +93,7 @@ class AdminProjectsController extends Controller
     {
         $adminprojects = Galeries::find($id);
         $adminprojects->update($request->all());
-        return redirect()->route('admin-projects')->with('message','La compétence '.$adminprojects->name.' à été editez avec succès !');
+        return redirect()->route('admin-projects')->with('message','La compétence '.$adminprojects->name.' à été editée avec succès !');
     }
 
     /**
